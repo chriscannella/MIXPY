@@ -1,5 +1,4 @@
 from mix_machine import MixMachine
-
 test_machine = MixMachine(64)
 test_machine.instruction.read([True, 8, 5, 4, 2000 % 64, 2000 / 64])
 print(test_machine.instruction)
@@ -32,4 +31,5 @@ test_machine.memory[2000] = [True, 4,5,3,16,1]
 test_machine.instruction.read("LDA 2000(1:5)")
 test_machine.instruction()
 print(test_machine.A)
+
 

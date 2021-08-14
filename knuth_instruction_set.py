@@ -1,6 +1,7 @@
 from mix_instruction_sets import *
 from mix_misc_operators import HLT
 from mix_loading_operators import *
+from mix_storing_operators import *
 
 class KnuthInstructionSet(InstructionSet):
     def __init__(self):
@@ -40,16 +41,16 @@ class KnuthInstructionSet(InstructionSet):
         self.instruction_list.append({"C": "21", "F": "RANGE5",  "name":"LD5N", "normF":5, "op" : LD5N})
         self.instruction_list.append({"C": "22", "F": "RANGE5",  "name":"LD6N", "normF":5, "op" : LD6N})
         self.instruction_list.append({"C": "23", "F": "RANGE5",  "name":"LDXN", "normF":5, "op" : LDXN})
-        self.instruction_list.append({"C": "24", "F": "RANGE5",  "name":"STA", "normF":5, "op" : lambda x : 0})
-        self.instruction_list.append({"C": "25", "F": "RANGE5",  "name":"ST1", "normF":5, "op" : lambda x : 0})
-        self.instruction_list.append({"C": "26", "F": "RANGE5",  "name":"ST2", "normF":5, "op" : lambda x : 0})
-        self.instruction_list.append({"C": "27", "F": "RANGE5",  "name":"ST3", "normF":5, "op" : lambda x : 0})
-        self.instruction_list.append({"C": "28", "F": "RANGE5",  "name":"ST4", "normF":5, "op" : lambda x : 0})
-        self.instruction_list.append({"C": "29", "F": "RANGE5",  "name":"ST5", "normF":5, "op" : lambda x : 0})
-        self.instruction_list.append({"C": "30", "F": "RANGE5",  "name":"ST6", "normF":5, "op" : lambda x : 0})
-        self.instruction_list.append({"C": "31", "F": "RANGE5",  "name":"STX", "normF":5, "op" : lambda x : 0})
-        self.instruction_list.append({"C": "32", "F": "RANGE5",  "name":"STJ", "normF":2, "op" : lambda x : 0})
-        self.instruction_list.append({"C": "33", "F": "RANGE5",  "name":"STZ", "normF":5, "op" : lambda x : 0})
+        self.instruction_list.append({"C": "24", "F": "RANGE5",  "name":"STA", "normF":5, "op" : STA})
+        self.instruction_list.append({"C": "25", "F": "RANGE5",  "name":"ST1", "normF":5, "op" : ST1})
+        self.instruction_list.append({"C": "26", "F": "RANGE5",  "name":"ST2", "normF":5, "op" : ST2})
+        self.instruction_list.append({"C": "27", "F": "RANGE5",  "name":"ST3", "normF":5, "op" : ST3})
+        self.instruction_list.append({"C": "28", "F": "RANGE5",  "name":"ST4", "normF":5, "op" : ST4})
+        self.instruction_list.append({"C": "29", "F": "RANGE5",  "name":"ST5", "normF":5, "op" : ST5})
+        self.instruction_list.append({"C": "30", "F": "RANGE5",  "name":"ST6", "normF":5, "op" : ST6})
+        self.instruction_list.append({"C": "31", "F": "RANGE5",  "name":"STX", "normF":5, "op" : STX})
+        self.instruction_list.append({"C": "32", "F": "RANGE5",  "name":"STJ", "normF":2, "op" : STJ})
+        self.instruction_list.append({"C": "33", "F": "RANGE5",  "name":"STZ", "normF":5, "op" : STZ})
         self.instruction_list.append({"C": "34", "F": "ANY",  "name":"JBUS", "normF":0, "op" : lambda x : 0})
         self.instruction_list.append({"C": "35", "F": "ANY",  "name":"IOC", "normF":0, "op" : lambda x : 0})
         self.instruction_list.append({"C": "36", "F": "ANY",  "name":"IN", "normF":0, "op" : lambda x : 0})
