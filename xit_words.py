@@ -11,6 +11,7 @@ class XitWord ():
         self.word = []
         self.word_length = word_length
         self.toggle = False
+        self.overflow = False
         if value:
             if word_length:
                 self.word = self.word_length*[0]
@@ -39,7 +40,7 @@ class XitWord ():
             temp_list[-1] *= -1
         if (len(temp_list) > 0) and temp_list[-1] >= self.base:
             temp_list = temp_list[0:-1] + represent_integer(temp_list[-1], self.base)[1:]
-        if len(temp_list) >= self.word_length:
+        if len(temp_list) > self.word_length:
             self.word = [xit for xit in temp_list[0:self.word_length]]
             self.overflow = True
         else:

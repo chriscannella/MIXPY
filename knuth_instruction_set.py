@@ -2,18 +2,19 @@ from mix_instruction_sets import *
 from mix_misc_operators import HLT
 from mix_loading_operators import *
 from mix_storing_operators import *
+from mix_arithmetic_operators import *
 
 class KnuthInstructionSet(InstructionSet):
     def __init__(self):
         self.instruction_list = []
         self.instruction_list.append({"C": "0", "F": "ANY",  "name":"NOP", "normF":0, "op" : lambda x : 0})
-        self.instruction_list.append({"C": "1", "F": "RANGE5",  "name":"ADD", "normF":5, "op" : lambda x : 0})
+        self.instruction_list.append({"C": "1", "F": "RANGE5",  "name":"ADD", "normF":5, "op" : ADD})
         self.instruction_list.append({"C": "1", "F": "RANGE6",  "name":"FADD", "normF":6, "op" : lambda x : 0})
-        self.instruction_list.append({"C": "2", "F": "RANGE5",  "name":"SUB", "normF":5, "op" : lambda x : 0})
+        self.instruction_list.append({"C": "2", "F": "RANGE5",  "name":"SUB", "normF":5, "op" : SUB})
         self.instruction_list.append({"C": "2", "F": "RANGE6",  "name":"FSUB", "normF":6, "op" : lambda x : 0})
-        self.instruction_list.append({"C": "3", "F": "RANGE5",  "name":"MUL", "normF":5, "op" : lambda x : 0})
+        self.instruction_list.append({"C": "3", "F": "RANGE5",  "name":"MUL", "normF":5, "op" : MUL})
         self.instruction_list.append({"C": "3", "F": "RANGE6",  "name":"FMUL", "normF":6, "op" : lambda x : 0})
-        self.instruction_list.append({"C": "4", "F": "RANGE5",  "name":"DIV", "normF":5, "op" : lambda x : 0})
+        self.instruction_list.append({"C": "4", "F": "RANGE5",  "name":"DIV", "normF":5, "op" : DIV})
         self.instruction_list.append({"C": "4", "F": "RANGE6",  "name":"FDIV", "normF":6, "op" : lambda x : 0})
         self.instruction_list.append({"C": "5", "F": "VAL0",  "name":"NUM", "normF":0, "op" : lambda x : 0})
         self.instruction_list.append({"C": "5", "F": "VAL1",  "name":"CHAR", "normF":1, "op" : lambda x : 0})

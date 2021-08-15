@@ -38,7 +38,7 @@ def add_words(word_1, word_2, subtraction=False):
     max_size = max(word_1.word_length, word_2.word_length)
     extend_1 = word_1.word + [0 for xit in range(0, max_size - word_1.word_length)]
     extend_2 = word_2.word + [0 for xit in range(0, max_size - word_2.word_length)]
-    max_test = [extend_1[xit] + extend_2[xit] for xit in range(0, max_size)]
+    max_test = [extend_1[xit] - extend_2[xit] for xit in range(0, max_size)]
     max_test = [result for result in max_test if result != 0]
     if len(max_test) == 0:
         return_word = [0 for xit in range(0, max_size)]
