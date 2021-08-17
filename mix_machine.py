@@ -6,7 +6,7 @@ class MixMachine():
     def __init__(self, base):
         self.base = base
         self.PC = 0
-        self.memory = [[False] + 5*[0] for i in range(0, 4000)]
+        self.memory = [XitWord(0, word_length=5, base=self.base) for i in range(0, 4000)]
         self.instruction_set = KnuthInstructionSet()
         self.instruction = MixInstruction(self)
         self.A = XitWord(0, word_length=5, base=self.base)
@@ -19,5 +19,3 @@ class MixMachine():
         self.E = False
         self.G = False
         self.running = False
-    def contents(self, M):
-        return XitWord(self.memory[M], word_length=5, base=self.base)

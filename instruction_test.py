@@ -27,7 +27,7 @@ test_machine.instruction.read("HLT 0")
 print(test_machine.instruction.data)
 print(test_machine.instruction)
 
-test_machine.memory[2000] = [True, 4,5,3,16,1]
+test_machine.memory[2000].read([True, 4,5,3,16,1])
 test_machine.instruction.read("LDA 2000(1:5)")
 test_machine.instruction()
 print(test_machine.A)
