@@ -261,12 +261,12 @@ class XitWord ():
     def __lshift__(self, shift):
         if shift < 0:
             return self >> -shift
-        return XitWord((shift*[0] + self.word), word_length = len(self) + shift, base = self.base)
+        return XitWord(([self.toggle] + shift*[0] + self.word), word_length = len(self) + shift, base = self.base)
     
     def __rshift__(self, shift):
         if shift < 0:
             return self << -shift
-        return XitWord((self.word + shift*[0]), word_length = len(self) + shift, base = self.base)
+        return XitWord(([self.toggle] + self.word + shift*[0]), word_length = len(self) + shift, base = self.base)
             
     def __str__(self):
         toggle_string = "+"
