@@ -91,4 +91,7 @@ def MOVE(mix_machine):
     mix_machine.index_registers[0] += XitWord(int(num_moved), word_length=2, base=mix_machine.base)
     return 1 + 2*num_moved
 
+def NOP(mix_machine):
+    return 1
+
 

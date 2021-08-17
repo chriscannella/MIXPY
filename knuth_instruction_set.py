@@ -10,7 +10,7 @@ from mix_jump_operators import *
 class KnuthInstructionSet(InstructionSet):
     def __init__(self):
         self.instruction_list = []
-        self.instruction_list.append({"C": "0", "F": "ANY",  "name":"NOP", "normF":0, "op" : lambda x : 0})
+        self.instruction_list.append({"C": "0", "F": "ANY",  "name":"NOP", "normF":0, "op" : NOP})
         self.instruction_list.append({"C": "1", "F": "RANGE5",  "name":"ADD", "normF":5, "op" : ADD})
         self.instruction_list.append({"C": "1", "F": "RANGE6",  "name":"FADD", "normF":6, "op" : lambda x : 0})
         self.instruction_list.append({"C": "2", "F": "RANGE5",  "name":"SUB", "normF":5, "op" : SUB})
