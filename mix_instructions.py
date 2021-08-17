@@ -34,6 +34,8 @@ class MixInstruction():
             self.data[3] = XitWord(I, word_length=1, base=self.base)[1]
             self.data[4] = XitWord(F, word_length=1, base=self.base)[1]
             self.data[5] = XitWord(C, word_length=1, base=self.base)[1]
+            if parsed_rep["ADDRESS"]:
+                self.data[0] = ("-" in parsed_rep["ADDRESS"])
         else:
             self.data.read(new_data)
         
@@ -51,7 +53,13 @@ class MixInstruction():
             return int(self.data[0:3] + self.machine.index_registers[self.I() - 1])
         else:
             return int(self.data[0:3])
-    
+
+    def M_word(self):
+        if self.I() > 0 and self.I()<=6:
+            return self.data[0:3] + self.machine.index_registers[self.I() - 1]
+        else:
+            return self.data[0:3]
+
     def F(self):
         return self.data[4]
     

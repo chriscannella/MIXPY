@@ -200,7 +200,10 @@ class XitWord ():
         return self
     
     def __neg__(self):
-        return XitWord([not self.toggle] + self.word,word_length=self.word_length, base=self.base)
+        if self != 0:
+            return XitWord([not self.toggle] + self.word,word_length=self.word_length, base=self.base)
+        else:
+            return self
     
     def index_grabber(self, index):
         if index == 0:
