@@ -1,0 +1,11 @@
+from mix_machine import MixMachine
+test_machine = MixMachine(64)
+test_machine.memory[1000].read(1)
+test_machine.memory[1001].read(2)
+test_machine.memory[1002].read(3)
+test_machine.index_registers[0].read(999)
+print([(i, str(test_machine.memory[i])) for i in range(999, 1003)] )
+test_machine.instruction.read("MOVE 1000(3)")
+test_machine.instruction()
+print([(i, str(test_machine.memory[i])) for i in range(999, 1003)] )
+print(int(test_machine.index_registers[0]))

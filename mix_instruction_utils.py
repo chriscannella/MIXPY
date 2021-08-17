@@ -30,8 +30,11 @@ def valid_F(parsed_rep, instruction_info):
             F_val = 8*F_range[0] + F_range[1]
             if "RANGE" in instruction_info["F"] and F_range[1] <= min(int(instruction_info["F"][-1]), 7) and F_range[0] <= F_range[1] :
                 return True, F_val
+            elif instruction_info["F"] == "ANY":
+                return True, F_val
             else:
-                return False, F_val    
+                return False, F_val
+
     return True, instruction_info["normF"]
         
     

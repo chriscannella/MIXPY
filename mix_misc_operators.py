@@ -81,3 +81,14 @@ def SRC(mix_machine):
     mix_machine.X[1:6] = return_word[6:11]
     return 2
 
+def MOVE(mix_machine):
+    num_moved = mix_machine.instruction.F()
+    print(num_moved)
+    starting_loc = mix_machine.instruction.M()
+    transfer_loc = int(mix_machine.index_registers[0])
+    for offset in range(0,num_moved):
+        mix_machine.memory[transfer_loc + offset].read(mix_machine.memory[starting_loc + offset])
+    mix_machine.index_registers[0] += XitWord(int(num_moved), word_length=2, base=mix_machine.base)
+    return 1 + 2*num_moved
+
+

@@ -68,7 +68,7 @@ class ModifiedInstructionSet():
         if ranges:
             return self.known_operations["RANGE" + str(min(ranges))]
         if "ANY" in self.known_operations:
-            return self.known_operations["ANY"]   
+            return self.known_operations["ANY"]
         return self.invalid_operation
     
     def instruction(self, F):

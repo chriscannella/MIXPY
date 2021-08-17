@@ -15,10 +15,12 @@ class MixInstruction():
             parsed_rep = parse_string_rep(new_data)
             if parsed_rep:
                 instruction_info, valid_instruction = self.machine.instruction_set.find(parsed_rep["OPNAME"])
+                print(instruction_info, valid_instruction)
             else:
                 instruction_info = self.machine.instruction_set.invalid_opcode
                 valid_instruction = False
             parsed_F = valid_F(parsed_rep, instruction_info)
+            print(parsed_F)
             if parsed_rep and valid_instruction and parsed_F[0]:
                 C = int(instruction_info["C"])
                 F = parsed_F[1]

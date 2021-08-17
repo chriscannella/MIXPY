@@ -28,7 +28,7 @@ class KnuthInstructionSet(InstructionSet):
         self.instruction_list.append({"C": "6", "F": "VAL3",  "name":"SRAX", "normF":3, "op" : SRAX})
         self.instruction_list.append({"C": "6", "F": "VAL4",  "name":"SLC", "normF":4, "op" : SLC})
         self.instruction_list.append({"C": "6", "F": "VAL5",  "name":"SRC", "normF":5, "op" : SRC})
-        self.instruction_list.append({"C": "7", "F": "ANY",  "name":"MOV", "normF":1, "op" : lambda x : 0})
+        self.instruction_list.append({"C": "7", "F": "ANY",  "name":"MOVE", "normF":1, "op" : MOVE})
         self.instruction_list.append({"C": "8", "F": "RANGE5",  "name":"LDA", "normF":5, "op" : LDA})
         self.instruction_list.append({"C": "9", "F": "RANGE5",  "name":"LD1", "normF":5, "op" : LD1})
         self.instruction_list.append({"C": "10", "F": "RANGE5",  "name":"LD2", "normF":5, "op" : LD2})
