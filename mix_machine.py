@@ -21,8 +21,3 @@ class MixMachine():
         self.running = False
     def contents(self, M):
         return XitWord(self.memory[M], word_length=5, base=self.base)
-        
-        
-        
-        
-        

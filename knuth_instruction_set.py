@@ -4,6 +4,7 @@ from mix_loading_operators import *
 from mix_storing_operators import *
 from mix_arithmetic_operators import *
 from mix_transfer_operators import *
+from mix_comparison_operators import *
 
 class KnuthInstructionSet(InstructionSet):
     def __init__(self):
@@ -148,15 +149,15 @@ class KnuthInstructionSet(InstructionSet):
         self.instruction_list.append({"C": "55", "F": "VAL1",  "name":"DECX", "normF":1, "op" : DECX})
         self.instruction_list.append({"C": "55", "F": "VAL2",  "name":"ENTX", "normF":2, "op" : ENTX})
         self.instruction_list.append({"C": "55", "F": "VAL3",  "name":"ENNX", "normF":3, "op" : ENNX})
-        self.instruction_list.append({"C": "56", "F": "RANGE5",  "name":"CMPA", "normF":5, "op" : lambda x : 0})
-        self.instruction_list.append({"C": "56", "F": "VAL6",  "name":"ENNX", "normF":6, "op" : lambda x : 0})
-        self.instruction_list.append({"C": "57", "F": "RANGE5",  "name":"CMP1", "normF":5, "op" : lambda x : 0})
-        self.instruction_list.append({"C": "58", "F": "RANGE5",  "name":"CMP2", "normF":5, "op" : lambda x : 0})
-        self.instruction_list.append({"C": "59", "F": "RANGE5",  "name":"CMP3", "normF":5, "op" : lambda x : 0})
-        self.instruction_list.append({"C": "60", "F": "RANGE5",  "name":"CMP4", "normF":5, "op" : lambda x : 0})
-        self.instruction_list.append({"C": "61", "F": "RANGE5",  "name":"CMP5", "normF":5, "op" : lambda x : 0})
-        self.instruction_list.append({"C": "62", "F": "RANGE5",  "name":"CMP6", "normF":5, "op" : lambda x : 0})
-        self.instruction_list.append({"C": "63", "F": "RANGE5",  "name":"CMPX", "normF":5, "op" : lambda x : 0})
+        self.instruction_list.append({"C": "56", "F": "RANGE5",  "name":"CMPA", "normF":5, "op" : CMPA})
+        self.instruction_list.append({"C": "56", "F": "VAL6",  "name":"FCMP", "normF":6, "op" : lambda x : 0})
+        self.instruction_list.append({"C": "57", "F": "RANGE5",  "name":"CMP1", "normF":5, "op" : CMP1})
+        self.instruction_list.append({"C": "58", "F": "RANGE5",  "name":"CMP2", "normF":5, "op" : CMP2})
+        self.instruction_list.append({"C": "59", "F": "RANGE5",  "name":"CMP3", "normF":5, "op" : CMP3})
+        self.instruction_list.append({"C": "60", "F": "RANGE5",  "name":"CMP4", "normF":5, "op" : CMP4})
+        self.instruction_list.append({"C": "61", "F": "RANGE5",  "name":"CMP5", "normF":5, "op" : CMP5})
+        self.instruction_list.append({"C": "62", "F": "RANGE5",  "name":"CMP6", "normF":5, "op" : CMP6})
+        self.instruction_list.append({"C": "63", "F": "RANGE5",  "name":"CMPX", "normF":5, "op" : CMPX})
         self.invalid_opcode = {"C" : "5", "normF": "VAL2", "F": 2}
         
         self.known_instructions = {}        
