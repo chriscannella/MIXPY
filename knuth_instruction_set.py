@@ -7,6 +7,7 @@ from mix_transfer_operators import *
 from mix_comparison_operators import *
 from mix_jump_operators import *
 from mix_io_operators import *
+from mix_conversion_operators import *
 
 class KnuthInstructionSet(InstructionSet):
     def __init__(self):
@@ -20,8 +21,8 @@ class KnuthInstructionSet(InstructionSet):
         self.instruction_list.append({"C": "3", "F": "RANGE6",  "name":"FMUL", "normF":6, "op" : lambda x : 0})
         self.instruction_list.append({"C": "4", "F": "RANGE5",  "name":"DIV", "normF":5, "op" : DIV})
         self.instruction_list.append({"C": "4", "F": "RANGE6",  "name":"FDIV", "normF":6, "op" : lambda x : 0})
-        self.instruction_list.append({"C": "5", "F": "VAL0",  "name":"NUM", "normF":0, "op" : lambda x : 0})
-        self.instruction_list.append({"C": "5", "F": "VAL1",  "name":"CHAR", "normF":1, "op" : lambda x : 0})
+        self.instruction_list.append({"C": "5", "F": "VAL0",  "name":"NUM", "normF":0, "op" : NUM})
+        self.instruction_list.append({"C": "5", "F": "VAL1",  "name":"CHAR", "normF":1, "op" : CHAR})
         self.instruction_list.append({"C": "5", "F": "VAL2",  "name":"HLT", "normF":2, "op" : HLT})
         self.instruction_list.append({"C": "6", "F": "VAL0",  "name":"SLA", "normF":0, "op" : SLA})
         self.instruction_list.append({"C": "6", "F": "VAL1",  "name":"SRA", "normF":1, "op" : SRA})
