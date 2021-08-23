@@ -66,7 +66,7 @@ class MixInstruction():
     def field_spec(self):
         f_val, f_spec = parse_F(self.F())
         if f_spec[0] <= f_spec[1]:
-            return f_spec[0], f_spec[1] + 1
+            return int(f_spec[0]), int(f_spec[1] + 1)
         return 0, 6
     
     def I(self):

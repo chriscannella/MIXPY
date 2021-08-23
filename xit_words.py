@@ -41,11 +41,11 @@ class XitWord ():
         if (len(temp_list) > 0) and temp_list[-1] >= self.base:
             temp_list = temp_list[0:-1] + represent_integer(temp_list[-1], self.base)[1:]
         if len(temp_list) > self.word_length:
-            self.word = [xit for xit in temp_list[0:self.word_length]]
+            self.word = [int(xit) for xit in temp_list[0:self.word_length]]
             self.overflow = True
         else:
             self.word = [0 for i in range(0, self.word_length)]
-            self.word[0:len(temp_list)] = [xit for xit in temp_list]
+            self.word[0:len(temp_list)] = [int(xit) for xit in temp_list]
         
     def read_int(self, integer):
         self.read_list(represent_integer(integer, self.base))
@@ -210,6 +210,7 @@ class XitWord ():
             return self.toggle
         else:
             return self.word[len(self.word) - index]
+
     def index_setter(self, index, value):
         if index == 0:
             self.toggle = value
@@ -218,7 +219,7 @@ class XitWord ():
     
     def __getitem__(self, key):
         if isinstance(key, slice):
-            indices = range(*key.indices(len(self.word) + 1))
+            indices = list(range(*key.indices(len(self.word) + 1)))
             return_toggle = False
             if 0 in indices:
                 return_toggle = self.index_grabber(0)
@@ -230,7 +231,7 @@ class XitWord ():
     def __setitem__(self, key, value):
         self.overflow = False
         if isinstance(key, slice):
-            indices = range(*key.indices(len(self.word) + 1))
+            indices = list(range(*key.indices(len(self.word) + 1)))
             word_value = XitWord(value, word_length=(len(indices) - int(0 in indices)), base=self.base)
             if 0 in indices:
                 self.index_setter(0, word_value[0])
@@ -276,7 +277,7 @@ class XitWord ():
         return "|" + return_string + "|"
         
     def __int__(self):
-        return ((-1)**(self.toggle))*sum([self.word[xit]*(self.base)**xit for xit in range(0, self.word_length)])
+        return int(((-1)**(self.toggle))*sum([self.word[xit]*(self.base)**xit for xit in range(0, self.word_length)]))
     
     def __obj__(self):
         return True
