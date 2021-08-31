@@ -1,4 +1,4 @@
-from mix_machine import MixMachine
+from mixmachine import MixMachine
 test_machine = MixMachine(64)
 test_machine.memory[1000].read(1)
 test_machine.memory[1001].read(2)

@@ -1,7 +1,9 @@
-from xit_words import XitWord
-from mix_instruction_utils import parse_F, parse_string_rep, valid_F
+from xitwords import XitWord
+from .util import parse_F, parse_string_rep, valid_F
+
+
 class MixInstruction():
-    def __init__(self,machine):
+    def __init__(self, machine):
         self.machine = machine
         self.base = machine.base
         self.data = XitWord(0, word_length=5, base=self.base)

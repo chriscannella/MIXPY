@@ -1,5 +1,5 @@
-from xit_words import XitWord
-from xit_math import *
+from xitwords import XitWord
+
 test_word = XitWord()
 
 print("Word Creation and Assignment Tests")

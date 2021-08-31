@@ -1,4 +1,4 @@
-from mix_jump_utils import *
+from mixmachine.utils.jump import *
 
 def JMP(mix_machine):
     M = mix_machine.instruction.M()

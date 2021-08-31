@@ -1,5 +1,5 @@
-from mix_comparison_utils import *
-from xit_words import XitWord
+from mixmachine.utils.comparison import *
+from xitwords import XitWord
 
 def CMPA(mix_machine):
     compare_register(mix_machine, mix_machine.A)

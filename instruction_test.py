@@ -1,4 +1,4 @@
-from mix_machine import MixMachine
+from mixmachine import MixMachine
 test_machine = MixMachine(64)
 test_machine.instruction.read([True, 8, 5, 4, 2000 % 64, 2000 / 64])
 print(test_machine.instruction)

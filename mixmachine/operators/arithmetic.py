@@ -1,4 +1,4 @@
-from xit_words import XitWord
+from xitwords import XitWord
 
 def ADD(mix_machine):
     M = mix_machine.instruction.M()

@@ -1,4 +1,4 @@
-from mix_storing_utils import store_register, store_zero
+from mixmachine.utils.store import store_register, store_zero
 
 def STA(mix_machine):
     return store_register(mix_machine, mix_machine.A)

@@ -1,4 +1,4 @@
-from xit_words import XitWord
+from xitwords import XitWord
 
 def NUM(mix_machine):
     data = []

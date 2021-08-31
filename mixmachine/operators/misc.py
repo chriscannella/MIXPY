@@ -1,4 +1,4 @@
-from xit_words import XitWord
+from xitwords import XitWord
 def HLT(mix_machine):
     mix_machine.running = False
     return 10

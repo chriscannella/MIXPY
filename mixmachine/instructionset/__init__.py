@@ -1,4 +1,5 @@
-from mix_instruction_utils import parse_F
+from mixmachine.instruction.util import parse_F
+
 
 class InstructionSet():
     def  __init__(self, instruction_list = []):
@@ -8,7 +9,7 @@ class InstructionSet():
         self.build_instructions(instruction_list)
         self.invalid_operation = None
         self.invalid_instruction = "INVALID INSTRUCTION"
-        self.invalid_opcode = {"C" : "0", "normF": 0, "F": "ANY"}
+        self.invalid_opcode = {"C": "0", "normF": 0, "F": "ANY"}
     
     def build_instructions(self, instruction_list):
         for instruction in instruction_list:

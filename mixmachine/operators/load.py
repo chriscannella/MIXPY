@@ -1,4 +1,4 @@
-from mix_loading_utils import load_register, load_register_negative
+from mixmachine.utils.load import load_register, load_register_negative
 
 def LDA(mix_machine):
     return load_register(mix_machine, mix_machine.A)

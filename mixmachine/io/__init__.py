@@ -1,4 +1,4 @@
-from xit_words import XitWord
+from xitwords import XitWord
 class MixIODevice():
     def __init__(self, host, block_size=1, num_blocks = 100):
         self.busy = False

@@ -1,4 +1,4 @@
-from xit_words import XitWord
+from xitwords import XitWord
 
 def store_register(mix_machine, register):
     M = mix_machine.instruction.M()

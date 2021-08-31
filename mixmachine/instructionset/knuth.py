@@ -1,13 +1,13 @@
-from mix_instruction_sets import *
-from mix_misc_operators import *
-from mix_loading_operators import *
-from mix_storing_operators import *
-from mix_arithmetic_operators import *
-from mix_transfer_operators import *
-from mix_comparison_operators import *
-from mix_jump_operators import *
-from mix_io_operators import *
-from mix_conversion_operators import *
+from mixmachine.instructionset import *
+from mixmachine.operators.misc import *
+from mixmachine.operators.load import *
+from mixmachine.operators.store import *
+from mixmachine.operators.arithmetic import *
+from mixmachine.operators.transfer import *
+from mixmachine.operators.comparison import *
+from mixmachine.operators.jump import *
+from mixmachine.operators.io import *
+from mixmachine.operators.conversion import *
 
 class KnuthInstructionSet(InstructionSet):
     def __init__(self):

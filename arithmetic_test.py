@@ -1,4 +1,4 @@
-from mix_machine import MixMachine
+from mixmachine import MixMachine
 test_machine = MixMachine(64)
 
 test_machine.memory[1000].read([False, 50 % 64 , 50 /64 ,5, 100 % 64, 100 /64])

@@ -1,4 +1,4 @@
-from mix_machine import MixMachine
+from mixmachine import MixMachine
 test_machine = MixMachine(64)
 
 

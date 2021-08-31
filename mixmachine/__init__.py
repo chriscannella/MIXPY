@@ -1,7 +1,9 @@
-from xit_words import XitWord
-from mix_io import MixIODevice
-from mix_instructions import MixInstruction
-from knuth_instruction_set import KnuthInstructionSet
+from xitwords import XitWord
+from mixmachine.io import MixIODevice
+from mixmachine.instruction import MixInstruction
+from mixmachine.instructionset.knuth import KnuthInstructionSet
+
+
 class MixMachine():
     def __init__(self, base):
         self.base = base

@@ -1,4 +1,4 @@
-from xit_math import *
+from xitwords.math import *
 
 class XitWord ():
 #===============================================================================
@@ -150,7 +150,7 @@ class XitWord ():
             return_word.overflow = True
         return return_word, remainder_word
     
-    def __div__(self, other):
+    def __truediv__(self, other):
         factor, remainder = divmod(self, other)
         return factor
     
@@ -186,7 +186,7 @@ class XitWord ():
         self.read([return_toggle] + return_list)
         return self
     
-    def __idiv__(self, other):
+    def __itruediv__(self, other):
         if other.base != self.base:
             temp_other = other | self.base
         else:

@@ -1,4 +1,4 @@
-from mix_transfer_utils import *
+from mixmachine.utils.transfer import *
 
 def ENTA(mix_machine):
     enter_address(mix_machine, mix_machine.A)

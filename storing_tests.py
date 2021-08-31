@@ -1,4 +1,4 @@
-from mix_machine import MixMachine
+from mixmachine import MixMachine
 test_machine = MixMachine(64)
 test_machine.memory[2000].read([True, 5,4,3,2,1])
 test_machine.A.read([False,0,9,8,7,6])
